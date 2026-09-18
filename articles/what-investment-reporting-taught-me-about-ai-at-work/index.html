@@ -35,7 +35,6 @@
       <header class="article-header container">
         <p class="eyebrow">Investment work · Technology</p>
         <h1>What Investment Reporting Taught Me About AI at Work</h1>
-        <p class="article-deck">Investment reporting changed how I think about AI at work: not simply as a way to automate tasks, but as a tool that can expand what people are able—and willing—to build themselves.</p>
         <div class="article-byline">
           <span>By Mujtaba Ali Bhutto</span>
           <time datetime="2026-09-18">18 September 2026</time>
@@ -44,61 +43,51 @@
       </header>
 
       <div class="article-body container">
-        <p class="article-lead">In private markets, the questions are often familiar even when the documents are not.</p>
+        <p class="article-lead">Early in my career, while working in sovereign reserve management, I joined a project to replace legacy Excel-based performance and reporting models with a more automated system.</p>
 
-        <p>Information arrives from different funds, in different formats and on different timelines. Before it can support portfolio analysis, it has to be brought into a consistent view. Managers report at different levels of detail, valuations arrive with a lag, cash flows change the portfolio between reporting dates, and even apparently simple fields can be defined differently.</p>
+        <p>The investment-reporting team understood the calculations and portfolio logic, but much of that knowledge lived inside the spreadsheets and in the accumulated experience of the people using them.</p>
 
-        <p>While working with a climate-focused portfolio of funds and co-investments, my main role was to understand how the investments were developing and prepare portfolio and performance reviews. I also became closely involved in turning the fragmented reporting behind those reviews into a usable portfolio view. That gave me a practical way to test whether newer AI tools could improve part of the process.</p>
+        <p>Before the in-house technology team could begin building, we had to explain how the portfolios worked: the instruments they contained, the way those instruments were priced, the meaning of duration, the returns that had to be measured and the way attribution should be interpreted. None of this was unusual within an investment team, but it did not arrive as a ready-made system specification.</p>
 
-        <h2>Why the portfolio view is difficult to assemble</h2>
+        <p>Both teams had the expertise they needed. One understood the financial logic and its purpose; the other knew how to build once that logic had been made explicit. What slowed the project was the distance between them.</p>
 
-        <p>A fund commitment gives an LP exposure to investments selected by the GP, with information about the underlying companies arriving through periodic reporting rather than a live market feed. Co-investments bring the investor closer to an individual company but add their own operating, financing and valuation questions. Across a portfolio containing both, commitments, cash flows and NAV sit alongside performance, deployment, manager commentary and underlying investment activity.</p>
+        <h2>The same problem in a different setting</h2>
 
-        <p>Platforms such as <a href="https://www.blackrock.com/aladdin/discover/press-release/blackrock-aladdin-drives-private-markets-transparency">eFront</a> and initiatives such as <a href="https://ilpa.org/industry-guidance/templates-standards-model-documents/ilpa-templates-hub/">ILPA’s reporting templates</a> can improve consistency, but <a href="https://ilpa.org/industry-guidance/templates-standards-model-documents/ilpa-templates-hub/reporting-template-endorsement-adoption/">reporting still varies across managers, funds and vintages</a>. Even a well-designed system can only organise the information that has reached it and passed the necessary checks.</p>
+        <p>I encountered a related problem later in a very different investment setting: a climate-focused portfolio of funds and co-investments. My main role was to understand how the investments were developing and prepare portfolio and performance reviews. Before that analysis could begin, information arriving from different managers, in different formats and on different timelines had to be brought into a consistent portfolio view.</p>
 
-        <p>The climate mandate added another complication: companies sat at very different stages of technological and commercial development, so they could not all be assessed on the same timetable. The financial questions remained central, but context often mattered as much as the number itself.</p>
+        <p>A fund commitment gives an LP exposure to investments selected by the GP, with information about the underlying companies arriving through periodic reporting rather than a live market feed. Co-investments bring the investor closer to an individual company but add their own operating, financing and valuation questions. Across a portfolio containing both, commitments, cash flows and NAV sit alongside fund performance, deployment, manager commentary and activity in the underlying investments.</p>
+
+        <p>Platforms such as <a href="https://www.blackrock.com/aladdin/discover/press-release/blackrock-aladdin-drives-private-markets-transparency">eFront</a> can collect and organise private-market data, while <a href="https://ilpa.org/industry-guidance/templates-standards-model-documents/ilpa-templates-hub/">ILPA’s reporting templates</a> have pushed the industry towards greater consistency. Adoption remains uneven, however, and <a href="https://ilpa.org/industry-guidance/templates-standards-model-documents/ilpa-templates-hub/reporting-template-endorsement-adoption/">availability varies by manager, fund, vintage and operational capability</a>. Even a well-designed system can only reflect the information that has reached it and passed the necessary checks.</p>
+
+        <p>The climate mandate added another complication. Companies sat at very different stages of technological and commercial development, so progress at a software business could not be assessed on the same timetable as a new industrial process or a capital-intensive energy technology. The financial questions remained central, but context often mattered as much as the number itself.</p>
 
         <h2>Testing a different way to work</h2>
 
-        <p>Quarterly updates often mean returning to lengthy GP reports, investment updates and capital-call notices to establish what has changed. Those documents cannot simply be reduced to a table: investment rationale, company developments, valuation movements and intended next steps provide context that structured data alone cannot reproduce.</p>
+        <p>Quarterly updates often mean returning to lengthy GP reports, investment updates and capital-call notices to establish what has changed. Those documents cannot simply be reduced to a table: investment rationale, developments within a company, valuation movements and intended next steps provide context that structured data alone cannot reproduce.</p>
 
-        <p>The case for testing AI came from the repetitive part of that work. The documents changed each quarter, but many of the questions did not. The same information had to be found, compared with earlier reports and mapped to the existing portfolio before the more interesting work could begin. I wanted to see whether AI could handle more of that first pass without displacing source review or the analyst’s interpretation.</p>
+        <p>The case for testing AI came from the repetitive part of that work. The documents changed each quarter, but the questions driving the portfolio analysis were often the same. Information had to be found, compared with earlier reports and mapped to the existing portfolio before the portfolio analysis could begin. I wanted to see whether AI could handle more of that first pass without displacing source review or the analyst’s interpretation.</p>
 
         <p>I began with a general chat tool and then developed a structured AI workflow that could draw on historical information about the investments. It extracted selected fields from new reports and notices into common templates, compared the latest material with earlier records and helped distinguish new investments from follow-on rounds, exits and valuation movements. Documents prepared by different managers could then feed into a more consistent downstream structure.</p>
 
         <p>Because the resulting data fed investment reporting and portfolio analysis, every extraction was cross-checked against the source and mapped to the correct fund or investment before it entered the portfolio records. That is not a special concession to AI; financially consequential data should be subject to controls regardless of how it enters a system. More systematic source citations and exception flags would make that review faster and easier to audit.</p>
 
-        <h2>The analysis still comes afterwards</h2>
+        <h2>Building the portfolio view</h2>
 
-        <p>Once the information followed a common structure, I built a Power BI reporting workflow from scratch to bring it together with eFront data, external benchmarks and internal records. AI remained useful throughout that process. I used it to work through new measures, queries and tables, troubleshoot transformations and test different ways of structuring the report as the reporting needs developed.</p>
+        <p>Once the information followed a common structure, I built a Power BI reporting workflow from scratch to bring it together with eFront data, external benchmarks and internal records. I had used Power BI before, but there is a considerable difference between knowing a tool and building an end-to-end process yourself. As the reporting needs developed, I used AI to work through unfamiliar measures, queries, tables and transformations, troubleshoot problems and test alternative ways of structuring the report.</p>
 
-        <p>I had used Power BI before, but there is a considerable difference between knowing a tool and building an end-to-end reporting workflow yourself. The latter had initially felt daunting. Being able to interrogate unfamiliar logic, understand why something was not working and test an alternative made it easier to keep building rather than stop at the limits of what I already knew. Over time, AI became less a way of obtaining an answer and more a way of learning enough to extend and improve the report myself.</p>
+        <p>That made the learning more immediate. An unfamiliar piece of logic no longer had to become a separate research project before I could move forward: I could examine it, test an implementation and understand what had gone wrong. Over time, AI became less a way of obtaining an answer and more a way of learning enough to extend and improve the report myself.</p>
 
-        <p>Transformation and validation rules checked that figures belonged to the correct fund, investment and reporting period, while links back to the source made discrepancies easier to investigate.</p>
+        <p>Transformation and validation rules checked that figures belonged to the correct fund, investment and reporting period, while links back to the source made discrepancies easier to investigate. The resulting portfolio view supported reviews of deployment, cash flows, performance and changes in NAV; traced new investments, follow-ons and exits across the underlying holdings; and fed into investment reviews, performance discussions and presentation material.</p>
 
-        <p>The resulting portfolio view supported reviews of deployment, cash flows, performance and changes in NAV, as well as the tracing of new investments, follow-ons and exits across the underlying holdings. It also fed investment reviews, performance discussions and presentation material. By that stage, the relevant question was rarely only what had changed. The analysis had to explain why it changed, whether the explanation was consistent with the underlying activity and what it meant for the investment plan.</p>
+        <p>By that stage, the relevant question was rarely only what had changed. The analysis had to explain why it changed, whether the explanation was consistent with the underlying activity and what it meant for the investment plan. A report records the portfolio at a point in time; monitoring carries its history forward and connects each movement with the decisions and developments behind it. The workflow did not supply that judgement, but it created a clearer starting point from which to exercise it.</p>
 
-        <p>This is the difference between reporting and monitoring. A report records the portfolio at a point in time; monitoring carries its history forward and connects each movement with the decisions and developments behind it. The workflow did not supply that judgement, but it created a clearer starting point from which to exercise it.</p>
+        <h2>What changed for me</h2>
 
-        <h2>A problem I had seen before</h2>
+        <p>Compared with the earlier reporting project, the practical difference was that I could remain involved after the work became technical. AI made it easier to move from understanding the reporting problem to testing a solution myself.</p>
 
-        <p>Before moving to Germany, I worked in sovereign reserve management, where one reporting project sought to move portfolio-return and performance calculations beyond a collection of legacy Excel models. The investment-reporting team understood those calculations, but much of the logic lived inside the spreadsheets and in the accumulated knowledge of the people using them.</p>
+        <p>A workflow built for one team is different from a secure, scalable production system. Code and extracted data still need to be checked, while access controls, reliability and governance may require specialist engineering. Those requirements should shape how a tool is used, but they need not prevent someone who understands the work from testing whether an improvement is useful.</p>
 
-        <p>Before the in-house technology team could begin building, we had to explain how the portfolios worked: the instruments they contained, the way those instruments were priced, the meaning of duration, the returns that had to be measured and the way attribution should be interpreted. None of this was unusual within an investment team, but it did not arrive as a ready-made system specification.</p>
-
-        <p>Both teams were capable. One understood the financial logic and its purpose; the other knew how to build once that logic had been made explicit. What slowed the project was the distance between the two forms of expertise.</p>
-
-        <h2>What AI changes</h2>
-
-        <p>That distance can make it harder to improve processes you understand well. A familiar business problem starts to feel like somebody else’s territory once solving it requires a measure, query, script, API or data model that sits just beyond what you already know.</p>
-
-        <p>What changed for me was not simply the speed of individual tasks. It was the range of technical work I was willing to attempt.</p>
-
-        <p>AI lowered the friction of doing that. An unfamiliar measure, query or transformation no longer had to become a separate research project before I could move forward. I could work through the logic, test an implementation and understand what had gone wrong. The result was not that the tool replaced the technical work; I became better able to do more of that work myself.</p>
-
-        <p>A prototype used within one team is different from a secure, scalable production system. Code and extracted data still need to be checked, while access controls, reliability and governance may require specialist engineering. Those requirements should shape how a tool is used; they need not prevent a knowledgeable professional from testing whether an idea is useful.</p>
-
-        <p>I do not think every analyst needs to become a developer. I do think analysts should be able to test improvements to work they understand and to move further into the technical implementation when it helps. The private-markets workflow did not remove the need to read GP reports, review valuations or interpret performance. It gave those tasks a more consistent foundation while making it easier for me to build and improve the system around them. For me, that is the practical value of AI in a business setting: it can lower the cost of experimentation and make it easier for domain knowledge to influence how a process is built.</p>
+        <p>The experience changed the range of technical work I was willing to attempt. Analysts do not need to become developers, but there is value in being able to move further into implementation when repetitive preparation is crowding out the analysis itself. The reports still had to be read, valuations questioned and performance interpreted. AI made it easier to improve the process around that work without confusing the process with the judgement it was meant to support.</p>
 
         <aside class="article-note">
           <p>This article reflects my personal views and experience. It describes general lessons from my work and does not disclose confidential or proprietary information belonging to any former employer, portfolio company, fund or manager.</p>
