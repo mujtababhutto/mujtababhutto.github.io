@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="What reporting projects in sovereign reserves and private markets taught me about business knowledge, technical barriers and the practical use of AI.">
+  <link rel="canonical" href="https://mujtababhutto.github.io/articles/what-investment-reporting-taught-me-about-ai-at-work/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Mujtaba Ali Bhutto">
+  <meta property="og:title" content="What Investment Reporting Taught Me About AI at Work">
+  <meta property="og:description" content="What reporting projects in sovereign reserves and private markets taught me about business knowledge, technical barriers and the practical use of AI.">
+  <meta property="og:url" content="https://mujtababhutto.github.io/articles/what-investment-reporting-taught-me-about-ai-at-work/">
+  <meta property="article:published_time" content="2026-09-18">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="What Investment Reporting Taught Me About AI at Work">
+  <meta name="twitter:description" content="What reporting projects in sovereign reserves and private markets taught me about business knowledge, technical barriers and the practical use of AI.">
+  <title>What Investment Reporting Taught Me About AI at Work — Mujtaba Ali Bhutto</title>
+  <link rel="stylesheet" href="/assets/css/styles.css?v=12">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-name" href="/">Mujtaba Ali Bhutto</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/projects/">Projects</a>
+        <a href="/articles/" aria-current="page">Articles</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="article-page">
+      <header class="article-header container">
+        <p class="eyebrow">Investment work · Technology</p>
+        <h1>What Investment Reporting Taught Me About AI at Work</h1>
+        <p class="article-deck">Reporting projects in sovereign reserve management and private markets made me think differently about where AI is useful. It can help people who understand a process take a more direct role in improving it.</p>
+        <div class="article-byline">
+          <span>By Mujtaba Ali Bhutto</span>
+          <time datetime="2026-09-18">18 September 2026</time>
+          <span>8 min read</span>
+        </div>
+      </header>
+
+      <div class="article-body container">
+        <p class="article-lead">Private-market information arrives from different funds, in different formats and on different timelines.</p>
+
+        <p>Before it can support portfolio analysis, those inputs have to be brought into a consistent view. That is a normal feature of private-market reporting: one manager may provide detailed company-level information while another reports mainly at fund level; valuations arrive with a lag; cash flows change the portfolio between reporting dates; and even apparently simple fields can be defined differently.</p>
+
+        <p>While working with a climate-focused portfolio of funds and co-investments, my main role was to understand how the investments were developing and prepare portfolio and performance reviews. I also became closely involved in turning the fragmented reporting behind those reviews into a usable portfolio view, which provided a practical test of whether newer AI tools could make part of that work easier.</p>
+
+        <h2>Why the portfolio view is difficult to assemble</h2>
+
+        <p>A fund commitment gives an LP exposure to investments selected and managed by the GP, with information about the underlying companies usually arriving through periodic manager reporting rather than a live market feed. Co-investments bring the investor closer to an individual company, but also introduce their own operating assumptions, financing structures and valuation questions. A portfolio containing both therefore has several layers: commitments, capital calls, distributions and NAV at the top; performance, deployment and manager commentary at fund level; and, beneath them, new investments, follow-on rounds, exits, write-downs and operating developments.</p>
+
+        <p>Platforms such as <a href="https://www.blackrock.com/aladdin/discover/press-release/blackrock-aladdin-drives-private-markets-transparency">eFront</a> can collect and organise private-market data, while <a href="https://ilpa.org/industry-guidance/templates-standards-model-documents/ilpa-templates-hub/">ILPA’s reporting templates</a> have pushed the industry towards greater consistency. Adoption is still uneven, however, and <a href="https://ilpa.org/industry-guidance/templates-standards-model-documents/ilpa-templates-hub/reporting-template-endorsement-adoption/">availability varies by manager, fund, vintage and operational capability</a>. Even a well-designed system can only reflect the information that has reached it and passed the necessary checks.</p>
+
+        <p>The climate mandate added another dimension. The companies in the portfolio sat at very different stages of technological and commercial development, so progress at a software business could not be assessed on the same timetable as a new industrial process or a capital-intensive energy technology. The financial questions remained central, but the explanation behind a number often mattered as much as the number itself.</p>
+
+        <h2>Testing a different way to work</h2>
+
+        <p>Much of a quarterly update involves returning to lengthy GP reports, investment updates and capital-call notices to locate recurring information and establish what has changed. Those documents cannot simply be reduced to a table: the manager’s investment rationale, account of developments within a company, explanation of a valuation movement and intended next steps all provide context that structured data cannot reproduce.</p>
+
+        <p>The case for testing AI came from the repetitive part of that work. The documents changed each quarter, but many of the questions did not. The same information had to be found, compared with earlier reports and mapped to the existing portfolio before the more interesting work could begin. I wanted to see whether AI could handle more of that first pass without displacing the source review or the analyst’s interpretation.</p>
+
+        <p>I began with a general chat tool and then developed an agent that could draw on historical information about the investments. It extracted selected fields from new reports and notices into a set of common templates, compared the latest material with earlier records and helped distinguish new investments from follow-on rounds, exits and valuation movements. The templates gave documents prepared by different managers a consistent downstream structure, making activity across the funds easier to compare.</p>
+
+        <p>Because the resulting data fed investment reporting and portfolio analysis, every extraction was cross-checked against the source and mapped to the correct fund or investment before it entered the portfolio records. That is not a special concession to AI; financially consequential data should be subject to controls regardless of how it enters a system. More systematic source citations and exception flags would make that review faster and easier to audit.</p>
+
+        <h2>The analysis still comes afterwards</h2>
+
+        <p>Once the information followed a common structure, it could be combined in Power BI with eFront data, external benchmarks and internal records. Transformation and validation rules checked that figures belonged to the correct fund, investment and reporting period, while the path back to the source document made discrepancies easier to investigate.</p>
+
+        <p>The resulting portfolio view supported reviews of deployment, cash flows, performance and changes in NAV, as well as the tracing of new investments, follow-ons and exits across the underlying holdings. It also provided the basis for investment reviews, performance discussions and presentation material. By that stage, the relevant question was rarely only what had changed. The analysis had to explain why it changed, whether the explanation was consistent with the underlying activity and what it meant for the investment plan.</p>
+
+        <p>This is the difference between reporting and monitoring. A report records the portfolio at a point in time; monitoring carries its history forward and connects each movement with the decisions and developments behind it. The workflow did not supply that judgement, but it created a clearer starting point from which to exercise it.</p>
+
+        <h2>A problem I had seen before</h2>
+
+        <p>Before moving to Germany, I worked in sovereign reserve management, where one reporting project sought to move portfolio-return and performance calculations beyond a collection of legacy Excel models. The investment-reporting team understood those calculations, but much of the logic lived inside the spreadsheets and in the accumulated knowledge of the people using them.</p>
+
+        <p>Before the in-house technology team could begin building, we had to explain how the portfolios worked: the instruments they contained, the way those instruments were priced, the meaning of duration, the returns that had to be measured and the way attribution should be interpreted. None of this was unusual within an investment team, but it did not arrive as a ready-made system specification.</p>
+
+        <p>Both teams were capable. One understood the financial logic and its purpose; the other knew how to build once that logic had been made explicit. What slowed the project was the distance between the two forms of expertise.</p>
+
+        <h2>What AI changes</h2>
+
+        <p>That distance can discourage business professionals from improving processes they understand well. A familiar reporting problem begins to sound like somebody else’s territory once the conversation turns to Python, SQL, APIs, libraries, scripts or VBA, even though the person doing the work may already understand the data, the important exceptions and the checks that a useful output requires.</p>
+
+        <p>AI makes that technical layer easier to approach. It can explain an existing script, turn a clearly stated business rule into a first query or transformation, help diagnose errors and document how the pieces of a workflow fit together. This does not remove the need to understand the output, but it allows the person closest to the problem to participate more directly in the first version and to have a more precise conversation with technical colleagues afterwards.</p>
+
+        <p>A prototype used within one team is, of course, different from a secure and scalable production system. Code and extracted data still need to be checked, while access controls, reliability and governance may require specialist engineering. Those requirements should shape how a tool is used; they need not prevent a knowledgeable professional from testing whether an idea is useful.</p>
+
+        <p>I do not think every analyst needs to become a developer. I do think analysts should be able to test an improvement to work they understand, particularly when repetitive preparation is crowding out the analysis itself. The private-markets workflow did not remove the need to read GP reports, question valuations or interpret performance. It gave those tasks a more consistent foundation. For me, that is the practical value of AI in a business setting: it makes it easier for domain knowledge to influence how a process is built.</p>
+
+        <aside class="article-note">
+          <p>This article reflects my personal views and experience. It describes general lessons from my work and does not disclose confidential or proprietary information belonging to any former employer, portfolio company, fund or manager.</p>
+        </aside>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 Mujtaba Ali Bhutto</span>
+      <div class="footer-links">
+        <a href="/articles/">All articles</a>
+        <a href="https://github.com/mujtababhutto">GitHub</a>
+        <a href="https://www.linkedin.com/in/mujtabaalibhutto/">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
