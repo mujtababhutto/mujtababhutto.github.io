@@ -13,7 +13,7 @@
       <a class="site-name" href="./">Mujtaba Ali Bhutto</a>
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="./" aria-current="page">Home</a>
-        <a href="projects/">Projects</a>
+        <a href="projects/">Work</a>
         <a href="articles/">Articles</a>
         <a href="about/">About</a>
       </nav>
@@ -22,16 +22,28 @@
 
   <main>
     <section class="hero">
-      <div class="container">
-        <p class="eyebrow">Frankfurt am Main, Germany</p>
-        <h1>Institutional investing, fixed income and quantitative research.</h1>
-        <p class="hero-copy">I’m an investment professional with experience across sovereign reserve management, fixed income, insurance portfolios and private markets. I’m also a CFA Level III candidate.</p>
-        <div class="text-links">
-          <a href="projects/">View projects</a>
-          <a href="about/">About me</a>
-          <a href="assets/docs/Mujtaba-Ali-Bhutto-Resume.pdf" download>Download résumé</a>
+      <div class="container hero-grid">
+        <div class="hero-main">
+          <p class="eyebrow">Frankfurt am Main, Germany</p>
+          <h1>Institutional investing, fixed income and quantitative research</h1>
+          <p class="hero-copy">I’m an investment professional with experience across sovereign reserve management, fixed income, insurance portfolios and private markets. I’m also a CFA Level III candidate.</p>
+          <div class="text-links">
+            <a href="projects/">View work</a>
+            <a href="articles/">Read articles</a>
+            <a href="about/">About me</a>
+          </div>
         </div>
-        <p class="availability"><strong>Open to full-time opportunities</strong> in portfolio and fund management, capital markets, investment risk and quantitative investment analysis. Based in Frankfurt and open to relocation.</p>
+        <aside class="hero-aside" aria-label="Availability and contact">
+          <p class="aside-label">Current</p>
+          <h2>Open to full-time opportunities</h2>
+          <p>Asset management, private markets, capital markets, investment risk and quantitative research.</p>
+          <p>Based in Frankfurt and open to relocation.</p>
+          <div class="aside-links">
+            <a href="https://www.linkedin.com/in/mujtabaalibhutto/">LinkedIn</a>
+            <a href="about/#contact">Email</a>
+            <a href="assets/docs/Mujtaba-Ali-Bhutto-Resume.pdf" download>Résumé</a>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -41,7 +53,7 @@
           <p class="section-index">01 / About</p>
         </div>
         <div class="prose">
-          <h2 id="about-heading">About me.</h2>
+          <h2 id="about-heading">About me</h2>
           <p>Before moving to Germany, I worked at the State Bank of Pakistan in International Markets &amp; Investments, managing institutional portfolios through the pandemic recovery, the global inflation shock and one of the sharpest monetary-tightening cycles in decades.</p>
           <p>I later completed a Master of Finance in Capital Markets at Frankfurt School and worked at Allianz Investment Management on investment analytics and private-market portfolios.</p>
           <p>What interests me most is whether an investment idea remains useful once it encounters real data, changing regimes and imperfect information.</p>
@@ -55,7 +67,7 @@
         <div class="section-head">
           <p class="section-index">02 / Experience</p>
           <div>
-            <h2 id="experience-heading">Experience.</h2>
+            <h2 id="experience-heading">Experience</h2>
           </div>
         </div>
         <div class="timeline">
@@ -87,42 +99,12 @@
       </div>
     </section>
 
-    <section class="section" aria-labelledby="focus-heading">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-index">03 / Focus</p>
-          <div>
-            <h2 id="focus-heading">Areas of focus.</h2>
-          </div>
-        </div>
-        <div class="plain-grid">
-          <div class="plain-item">
-            <h3>Fixed income and credit</h3>
-            <p>Rates, credit markets, portfolio risk and the macroeconomic regimes that shape them.</p>
-          </div>
-          <div class="plain-item">
-            <h3>Portfolio construction</h3>
-            <p>Asset allocation, optimisation, performance analysis, scenario testing and downside risk.</p>
-          </div>
-          <div class="plain-item">
-            <h3>Private markets</h3>
-            <p>Institutional portfolio analysis, monitoring and decision support for less liquid investments.</p>
-          </div>
-          <div class="plain-item">
-            <h3>Quantitative analysis</h3>
-            <p>Python, machine learning and financial data applied to practical investment questions.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section" aria-labelledby="projects-heading">
       <div class="container">
         <div class="section-head">
-          <p class="section-index">04 / Selected projects</p>
+          <p class="section-index">03 / Selected work</p>
           <div>
-            <h2 id="projects-heading">Projects.</h2>
-            <p class="section-intro">Three examples of my recent work. The full list is on the Projects page.</p>
+            <h2 id="projects-heading">Research and analysis</h2>
           </div>
         </div>
         <div class="project-list">
@@ -131,9 +113,12 @@
             <div>
               <h2>Equity-Implied Signals in Corporate Bond Allocation</h2>
               <p>Tests whether equity-market information improves tactical allocation between high-yield and investment-grade bonds out of sample.</p>
+              <ul class="project-tags" aria-label="Topics">
+                <li>Corporate credit</li><li>Forecasting</li><li>Out-of-sample testing</li><li>Python</li>
+              </ul>
             </div>
             <div class="project-links">
-              <a href="https://github.com/mujtababhutto/Equity-implied-signals-in-corporate-bond-allocation">Repository</a>
+              <a href="articles/can-equity-markets-help-time-corporate-bond-allocation/">Read article</a>
             </div>
           </article>
           <article class="project-row">
@@ -141,10 +126,12 @@
             <div>
               <h2>Regime-Aware Fixed-Income Allocation</h2>
               <p>Links macroeconomic and policy regimes to transparent portfolio allocations and risk controls.</p>
+              <ul class="project-tags" aria-label="Topics">
+                <li>Fixed income</li><li>Asset allocation</li><li>Market regimes</li><li>Python</li>
+              </ul>
             </div>
             <div class="project-links">
-              <a href="https://mujtababhutto.github.io/Regime-Aware-Fixed-Income-Allocation/">Project page</a>
-              <a href="https://github.com/mujtababhutto/Regime-Aware-Fixed-Income-Allocation">Repository</a>
+              <a href="https://mujtababhutto.github.io/Regime-Aware-Fixed-Income-Allocation/">View analysis</a>
             </div>
           </article>
           <article class="project-row">
@@ -152,14 +139,17 @@
             <div>
               <h2>Regime-Switching CPDO Risk Model</h2>
               <p>Examines spread dynamics, leverage, path dependency and rating-model assumptions in structured credit.</p>
+              <ul class="project-tags" aria-label="Topics">
+                <li>Structured credit</li><li>Monte Carlo</li><li>Stress testing</li><li>Rating risk</li>
+              </ul>
             </div>
             <div class="project-links">
-              <a href="https://mujtababhutto.github.io/Regime-Switching-CPDO-Risk-Model/">Project page</a>
+              <a href="https://mujtababhutto.github.io/Regime-Switching-CPDO-Risk-Model/">View analysis</a>
             </div>
           </article>
         </div>
         <div class="text-links">
-          <a href="projects/">View all projects</a>
+          <a href="projects/">View all work</a>
         </div>
       </div>
     </section>
@@ -167,7 +157,7 @@
     <section class="section" aria-labelledby="article-heading">
       <div class="container content-grid">
         <div class="content-label">
-          <p class="section-index">05 / Latest article</p>
+          <p class="section-index">04 / Latest article</p>
         </div>
         <article class="prose article-preview">
           <p class="project-meta">18 September 2026 · 11 min read</p>
@@ -178,56 +168,6 @@
       </div>
     </section>
 
-    <section class="section" aria-labelledby="education-heading">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-index">06 / Education</p>
-          <div>
-            <h2 id="education-heading">Education.</h2>
-          </div>
-        </div>
-        <div class="timeline">
-          <article class="timeline-entry">
-            <time>2024–2026</time>
-            <div>
-              <h3>Frankfurt School of Finance &amp; Management</h3>
-              <p class="role">Master of Finance · Capital Markets · Grade 1.7 · Deutschlandstipendium Scholar</p>
-            </div>
-          </article>
-          <article class="timeline-entry">
-            <time>Jan–Apr 2026</time>
-            <div>
-              <h3>Luxembourg School of Business</h3>
-              <p class="role">Exchange Semester · International Finance</p>
-            </div>
-          </article>
-          <article class="timeline-entry">
-            <time>2015–2019</time>
-            <div>
-              <h3>Lahore University of Management Sciences</h3>
-              <p class="role">BSc (Honours) Accounting &amp; Finance · Graduated with High Merit</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="contact-heading">
-      <div class="container content-grid">
-        <div class="content-label">
-          <p class="section-index">07 / Contact</p>
-        </div>
-        <div class="prose">
-          <h2 id="contact-heading">Contact.</h2>
-          <p>Markets, macroeconomics and geopolitics often overlap with technology, history and the things people choose to build. I’m always interested in exchanging ideas—or talking about cricket, Formula 1, books, hiking and discovering a new city.</p>
-          <div class="text-links">
-            <a href="https://www.linkedin.com/in/mujtabaalibhutto/">LinkedIn</a>
-            <a href="https://github.com/mujtababhutto">GitHub</a>
-            <a href="about/#contact">Email</a>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
