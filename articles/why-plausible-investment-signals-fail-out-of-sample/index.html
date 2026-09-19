@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Can information from equity and option markets improve tactical allocation between high-yield and investment-grade corporate bonds?">
-  <link rel="canonical" href="https://mujtababhutto.github.io/articles/can-equity-markets-help-time-corporate-bond-allocation/">
+  <meta name="description" content="Why economically plausible investment signals can produce respectable backtests yet fail to add useful information out of sample.">
+  <link rel="canonical" href="https://mujtababhutto.github.io/articles/why-plausible-investment-signals-fail-out-of-sample/">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Mujtaba Ali Bhutto">
-  <meta property="og:title" content="Can Equity Markets Help Time Corporate Bond Allocation?">
-  <meta property="og:description" content="Can information from equity and option markets improve tactical allocation between high-yield and investment-grade corporate bonds?">
-  <meta property="og:url" content="https://mujtababhutto.github.io/articles/can-equity-markets-help-time-corporate-bond-allocation/">
-  <meta property="og:image" content="https://mujtababhutto.github.io/assets/images/article-1-preview.png">
+  <meta property="og:title" content="Why Plausible Investment Signals Fail Out of Sample">
+  <meta property="og:description" content="A plausible market story and a respectable backtest are not enough. The harder question is whether a signal adds information that survives out of sample.">
+  <meta property="og:url" content="https://mujtababhutto.github.io/articles/why-plausible-investment-signals-fail-out-of-sample/">
+  <meta property="og:image" content="https://mujtababhutto.github.io/assets/images/article-2-preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="article:published_time" content="2026-08-14">
+  <meta property="article:published_time" content="2026-09-05">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Can Equity Markets Help Time Corporate Bond Allocation?">
-  <meta name="twitter:description" content="Can information from equity and option markets improve tactical allocation between high-yield and investment-grade corporate bonds?">
-  <meta name="twitter:image" content="https://mujtababhutto.github.io/assets/images/article-1-preview.png">
-  <title>Can Equity Markets Help Time Corporate Bond Allocation? — Mujtaba Ali Bhutto</title>
+  <meta name="twitter:title" content="Why Plausible Investment Signals Fail Out of Sample">
+  <meta name="twitter:description" content="A plausible market story and a respectable backtest are not enough. The harder question is whether a signal adds information that survives out of sample.">
+  <meta name="twitter:image" content="https://mujtababhutto.github.io/assets/images/article-2-preview.png">
+  <title>Why Plausible Investment Signals Fail Out of Sample — Mujtaba Ali Bhutto</title>
   <link rel="stylesheet" href="/assets/css/styles.css?v=7">
 </head>
 <body>
@@ -37,142 +37,116 @@
   <main>
     <article class="article-page">
       <header class="article-header container">
-        <p class="eyebrow">Credit markets · Cross-asset signals</p>
-        <h1>Can Equity Markets Help Time Corporate Bond Allocation?</h1>
-        <p class="article-deck">Equity and option markets contain forward-looking information about risk. My master’s thesis asked whether that information could improve allocation between high-yield and investment-grade corporate bonds.</p>
+        <p class="eyebrow">Forecasting · Backtests · Model risk</p>
+        <h1>Why Plausible Investment Signals Fail Out of Sample</h1>
+        <p class="article-deck">The equity signals in my thesis made economic sense, and some produced respectable portfolio results. They still failed the more important test: adding useful information out of sample.</p>
         <div class="article-byline">
           <span>By Mujtaba Ali Bhutto</span>
-          <time datetime="2026-08-14">14 August 2026</time>
-          <span>11 min read</span>
+          <time datetime="2026-09-05">5 September 2026</time>
+          <span>8 min read</span>
         </div>
       </header>
 
       <div class="article-body container">
-        <p class="article-lead">Credit investors rarely look only at credit.</p>
+        <p class="article-lead">The equity signals failed their first real test.</p>
 
-        <p>A widening corporate-bond spread may confirm that markets have become more concerned about default risk, liquidity or the economic outlook. But by the time that shift is clearly visible in credit spreads, it may already have appeared elsewhere—in equities, options, rates or currencies.</p>
+        <p>They did not forecast the relative performance of high-yield and investment-grade corporate bonds better than simple alternatives. Once credit-market information and realistic benchmarks were taken into account, the apparent advantage largely disappeared.</p>
 
-        <p>I became interested in this while working in sovereign reserve management through the pandemic recovery, the inflation shock and the sharp tightening cycle that followed. Those years were a reminder that stress does not remain neatly inside one asset class. It moves between markets, though not always at the same speed or in the same way.</p>
+        <p>The portfolio results were less straightforward. Some tactical strategies still produced respectable historical performance, and one of the combined models looked reasonably competitive on a risk-adjusted basis. Had I started with the backtest and stopped there, the conclusion would have been much more flattering.</p>
 
-        <p>That observation became the starting point for my master’s thesis at Frankfurt School: could information from equity and option markets improve tactical allocation between high-yield and investment-grade corporate bonds?</p>
+        <p>That gap between a plausible signal, a weak forecast and a decent-looking portfolio became one of the more useful results of the thesis.</p>
 
-        <p>The logic was appealing. High-yield bonds are more exposed to economic weakness and shifts in risk appetite, while investment-grade bonds are generally more defensive from a credit perspective. If equity-derived indicators provided an earlier warning of deteriorating conditions, an investor might reduce high-yield exposure before the credit market had fully adjusted—and add it back as conditions improved.</p>
+        <h2>A signal should beat what you already know</h2>
 
-        <p>But a plausible market story is not necessarily a useful investment signal.</p>
+        <p>Investment backtests often begin at the end. A model generates positions, those positions generate returns and a Sharpe or information ratio becomes the verdict on whether the idea worked.</p>
 
-        <h2>Two markets watching the same firms</h2>
+        <p>I approached the problem in the opposite order. Before asking whether a strategy made money historically, I wanted to know whether the information behind it improved the forecast.</p>
 
-        <p>Equity and corporate debt occupy different places in a company’s capital structure, but both respond to changes in the health of the same underlying business.</p>
+        <p>The target was the monthly relative performance of high yield over investment grade. Each model therefore had to compete with information an investor could already have used. One benchmark assumed that future relative returns would resemble their recursively estimated historical average. Another allowed recent relative performance to contain some information about what came next.</p>
 
-        <p>When a company’s prospects deteriorate, its equity may fall, option-implied risk may rise and its credit spreads may widen. The effects are not identical, but they often stem from the same underlying change in expectations.</p>
-
-        <p>That relationship is particularly important in high yield. Lower-rated companies have less room for error, so their bonds tend to respond more sharply to weaker growth, tighter financial conditions and declining risk appetite. Investment-grade bonds are not immune, but their returns usually reflect a different balance between interest-rate and credit risk.</p>
-
-        <p>The choice between high yield and investment grade is therefore not simply a search for whichever market offers the higher return. It is also a decision about how much credit risk an investor wants to carry at a particular point in the cycle.</p>
+        <p>The equity-derived signals did worse than both.</p>
 
         <figure>
-          <img src="images/corporate-bond-spreads.png" alt="Corporate bond index spreads from 1994 to 2026">
-          <figcaption>High-yield spreads have been wider and more volatile than investment-grade spreads, particularly during periods of market stress. Source: thesis analysis using corporate-bond index data.</figcaption>
+          <img src="images/out-of-sample-benchmarks.png" alt="Out-of-sample performance of credit and equity models against the prevailing-mean and autoregressive benchmarks">
+          <figcaption>The equity and encompassing models underperformed both simple benchmarks out of sample. The restricted credit model improved on the autoregressive benchmark, but not on the prevailing-mean comparison. Source: thesis analysis.</figcaption>
         </figure>
 
-        <p>The long history of spreads makes the distinction clear. During the dot-com decline, the global financial crisis, the pandemic shock and later periods of tightening, high-yield spreads moved far more dramatically. A tactical allocation process would be valuable if it could identify when the compensation for taking that additional credit risk was becoming more or less attractive.</p>
+        <p>The credit variables held up better, although the conclusion depended on the comparison. One credit specification improved on the recent-performance benchmark while still failing to beat the historical mean. A model does not become useful simply because it can beat one convenient alternative.</p>
 
-        <h2>Why look to equity options?</h2>
+        <p>That distinction matters in noisy return data. Change the benchmark and the same forecasting model can appear either encouraging or redundant. The stronger credit result was visible relative to the autoregressive model, but not relative to the prevailing mean.</p>
 
-        <p>Credit spreads already reflect the market’s assessment of default, liquidity and broader economic risk. Equity options offer another perspective on the same environment and one that can adjust quickly as investors reassess the distribution of future outcomes.</p>
+        <h2>Then came 2020</h2>
 
-        <p>I focused on three measures.</p>
+        <p>Average forecast statistics also hide when a model works and when it fails.</p>
 
-        <p><strong>The VIX</strong> summarises the volatility implied by S&amp;P 500 options. It is often described as a fear gauge, although it is more accurately understood as the market price of expected near-term volatility.</p>
-
-        <p><strong>CBOE SKEW</strong> captures the relative pricing of unusually severe downside outcomes. It can rise even when conventional measures of volatility remain relatively calm, making it potentially useful as a measure of tail-risk concern.</p>
-
-        <p><strong>The variance risk premium</strong> compares option-implied variance with subsequently realised variance. The gap partly reflects how much investors are willing to pay for protection against volatility risk.</p>
-
-        <p>The three measures are related, but they capture different aspects of market pricing: expected turbulence, downside asymmetry and the price of protection.</p>
-
-        <p>The visual relationship with credit can be striking. Large increases in the VIX, for example, often coincide with wider high-yield spreads. That does not establish predictability—the two series can simply be reacting to the same shock—but it is enough to motivate a more demanding test.</p>
+        <p>Several specifications had looked reasonably competitive through parts of the 2010s. The pandemic changed that record sharply. Large forecast errors around the 2020 shock materially worsened the cumulative performance of the equity and combined models.</p>
 
         <figure>
-          <img src="images/equity-signals-and-credit.png" alt="Equity-implied signals and the high-yield spread">
-          <figcaption>The VIX and high-yield spread often rise around the same episodes, while SKEW follows a different pattern. Co-movement alone does not show that one can forecast the other. Source: thesis analysis.</figcaption>
+          <img src="images/forecast-performance-over-time.png" alt="Cumulative out-of-sample forecast performance showing a sharp deterioration in equity-based models during 2020">
+          <figcaption>Forecast performance relative to the autoregressive benchmark. A rising line indicates improvement; the equity and encompassing models deteriorated sharply around the 2020 shock. Source: thesis analysis.</figcaption>
         </figure>
 
-        <p>The chart also illustrates the central difficulty. Two markets reacting to the same shock is very different from one market providing information early enough to forecast the other.</p>
+        <p>For a credit-allocation signal, this is not a minor detail. Stress periods are not awkward observations to be cleaned out of the sample. They are often precisely when an investor wants the signal to be useful.</p>
 
-        <h2>The timing problem</h2>
+        <p>I tested that sensitivity separately. Once the global financial crisis and the early pandemic period were removed, the equity forecast looked considerably less poor. It still did not produce positive out-of-sample evidence against the recent-performance benchmark. The exercise mainly showed that the relationship was highly sensitive to episodes of genuine market stress.</p>
 
-        <p>The important word in the research question was not <em>information</em>. It was <em>incremental</em>.</p>
+        <p>A signal that works through ordinary markets but changes character when conditions become extreme may still describe the past reasonably well. It is harder to rely on for timing risk.</p>
 
-        <p>Equity markets may process some news before credit markets, particularly for individual companies and over short horizons. My thesis, however, examined broad high-yield and investment-grade indices at a monthly frequency. Any lead visible over hours or days may have disappeared by the time a monthly allocation decision is made.</p>
+        <h2>The portfolio told a more flattering story</h2>
 
-        <p>There is a second problem. Equity-implied measures and credit variables may simply be different expressions of the same underlying risk. A rise in the VIX and a widening high-yield spread might both reflect weaker growth expectations, tighter financial conditions or a broader retreat from risk. If the credit market already captures that change, adding the equity signal may contribute very little.</p>
+        <p>Poor forecasting results did not translate mechanically into poor portfolio statistics.</p>
 
-        <p>So the relevant test was narrower than asking whether equity markets contain information about credit. It was whether the VIX, SKEW and variance risk premium added anything beyond information already available from bond performance and the credit market itself.</p>
+        <p>The forecasts were converted into modest tilts around a strategic high-yield and investment-grade allocation. On a point-estimate basis, the credit strategy produced the strongest result. A strategy combining credit and equity information also looked competitive, and even the equity strategy recorded a positive information ratio despite the weakness of its forecasts.</p>
 
-        <h2>Turning the question into an allocation decision</h2>
+        <figure>
+          <img src="images/information-ratios.png" alt="Information-ratio estimates and bootstrap confidence intervals for five tactical allocation strategies">
+          <figcaption>The portfolio point estimates were more encouraging than the forecasting results, but every 95% bootstrap interval included zero. Source: thesis analysis.</figcaption>
+        </figure>
 
-        <p>I framed the problem as a monthly choice between high-yield and investment-grade corporate bonds.</p>
+        <p>Viewed only as a backtest, that is an attractive story. Accounting for uncertainty changes the interpretation.</p>
 
-        <p>The portfolio began with a strategic allocation to both markets. Each month, a forecasting model estimated the expected relative performance of high yield versus investment grade. A positive forecast supported a tilt towards high yield; a negative one shifted the portfolio towards investment grade. Those tilts were deliberately bounded so that the exercise remained an asset-allocation problem rather than an unconstrained trading strategy.</p>
+        <p>There was also a model-selection problem. Once several economically plausible signals and specifications have been explored, some will inevitably look better historically than others. I used bootstrap inference and Hansen’s Superior Predictive Ability test to ask whether the stronger-looking strategies survived the wider model search. They did not provide convincing evidence of a persistent benchmark-relative advantage.</p>
 
-        <p>Focusing on relative performance also helped isolate the credit decision. Trying to predict whether corporate bonds as a whole will rise or fall introduces another major variable: the direction of government-bond yields. Comparing high yield with investment grade instead asks a cleaner question—should the portfolio carry more or less exposure to lower-quality credit?</p>
+        <p>This does not make the portfolio exercise meaningless. A noisy forecast can still be directionally right during a handful of influential periods. Position limits and active-risk controls can also contain the damage from bad forecasts while retaining some benefit from better ones. A constrained portfolio can therefore look more respectable than the underlying forecasting evidence.</p>
 
-        <p>It also provides a practical test of whether a new signal is worth using. A forecast does not need to be right every month. It needs to improve the portfolio relative to strategies that were already available without it.</p>
+        <p>The practical question is whether there is a credible source of information beneath that performance. For the equity signals I tested, the answer became less convincing as the benchmarks and statistical tests became more demanding.</p>
 
-        <h2>Designing a test that could fail</h2>
+        <h2>What held up better</h2>
 
-        <p>Many financial relationships look convincing when they are estimated over the full historical sample. The model effectively benefits from knowing the period it is being asked to explain, and relationships that appear stable in hindsight can prove much less useful in real time.</p>
+        <p>The credit information set was more durable than the equity block. That has a straightforward economic interpretation: if the decision is how much credit risk to carry, information coming directly from corporate-bond spreads is closer to the allocation problem than an aggregate measure of equity-market volatility.</p>
 
-        <p>I wanted the thesis to face the harder test.</p>
+        <p>One robustness check made the distinction clearer. High-yield and investment-grade bonds differ not only in credit quality but also in sensitivity to government-bond yields. Their relative return is therefore not a pure measure of credit risk. A strategy that appears to time credit may partly be responding to differences in duration.</p>
 
-        <p>The dataset runs from February 1994 to April 2026, with the genuine forecasting exercise beginning in January 2010. At each point, the model is estimated using only information that would have been available at the time. It then forecasts the following period, the sample expands by one month and the process begins again.</p>
+        <p>When I reduced that duration mismatch, the credit signal became stronger. The equity result did not. A separate adjustment for the smoothing present in corporate-bond index returns moved the credit result in the other direction: its apparent forecasting advantage weakened, while the conclusion on the equity variables remained broadly unchanged.</p>
 
-        <p>The models were organised around four information sets:</p>
+        <p>The credit evidence was therefore promising rather than conclusive. It depended on the benchmark and on how the relative return was constructed. But it survived more of the analysis than the equity block did.</p>
 
-        <ol>
-          <li><strong>Persistence models</strong> used the recent history of relative high-yield and investment-grade performance.</li>
-          <li><strong>Credit models</strong> added information from corporate-bond spreads and related credit measures.</li>
-          <li><strong>Equity-information models</strong> used VIX, SKEW and the variance risk premium.</li>
-          <li><strong>Combined models</strong> tested whether those equity variables still added value once credit information was already present.</li>
-        </ol>
+        <h2>A negative result, but a narrow one</h2>
 
-        <p>Broader macroeconomic and financial-condition variables appeared in supplementary specifications, but the central comparison remained deliberately simple: did equity-derived information improve on persistence and credit information?</p>
+        <p>It would be easy to summarise the thesis as evidence that equity signals do not work for credit. The results do not support a claim that broad.</p>
 
-        <h2>A model is only as good as its benchmark</h2>
+        <p>The study tested three aggregate equity-implied measures—VIX, SKEW and the variance risk premium—for an allocation between broad US high-yield and investment-grade indices at a monthly horizon. That setting places clear boundaries around the conclusion.</p>
 
-        <p>A forecasting model can look impressive simply because the alternative is weak.</p>
+        <p>If information travels from equities to credit over days rather than months, a month-end model may arrive too late. If the relationship is strongest at the level of individual companies or sectors, broad indices can dilute it. And if equity options and credit spreads react to the same deterioration in underlying risk, the equity signal can be economically informative without adding anything once the credit market is already observed.</p>
 
-        <p>Suppose a complicated signal beats a static forecast based on the historical mean. That is encouraging, but not enough. If a simple autoregressive model using recent relative performance performs better, the additional complexity has not earned its place.</p>
+        <p>There is also no reason to assume that the relationship must be linear. Equity-derived information may matter only in particular regimes, beyond certain thresholds or when paired with information about the borrower’s balance sheet.</p>
 
-        <p>I therefore used several benchmarks. Forecasts were compared with a recursively estimated prevailing mean and with autoregressive models. The resulting portfolio strategies were also assessed against a static allocation, looking not only at returns but at volatility, drawdowns, turnover, risk-adjusted performance and active results.</p>
+        <p>The negative result narrows the hypothesis. It does not dispose of it.</p>
 
-        <p>There was one further problem to guard against: testing many models increases the chance that at least one will look successful by accident. Bootstrap inference and a Superior Predictive Ability test were used to examine whether the stronger-looking results survived after accounting for the wider set of models considered.</p>
+        <h2>What I would test next</h2>
 
-        <h2>What I expected</h2>
+        <p>I would not respond by adding more variables to the same monthly index regression.</p>
 
-        <p>Going into the research, I expected the equity variables to add something. Probably not enough to transform the allocation process, but enough to improve its timing around changes in market stress.</p>
+        <p>A better next test would move closer to where an information advantage might exist: shorter horizons, issuer- or sector-level data, option measures matched more directly to corporate borrowers, and models that allow the relationship between equity and credit markets to change across regimes.</p>
 
-        <p>The intuition seemed strongest near turning points. Option prices can adjust quickly when investors become concerned about downside risk. Broad credit indices might respond more gradually. A combined model could, in principle, use credit spreads to describe where the market was and equity-derived measures to offer some indication of where it might be heading.</p>
+        <p>The thesis began with an economic story that still makes sense. Equity and corporate debt are claims on the same firms. Option markets can reprice risk quickly. High-yield bonds are particularly sensitive to changes in growth expectations and risk appetite.</p>
 
-        <p>There were good reasons to doubt that hypothesis. Monthly data might be too slow to capture any lead from equities to credit. Broad indices could wash out information that is visible at the level of individual firms. The VIX, SKEW and variance risk premium might capture risks that matter greatly for equities without providing a clean signal for relative corporate-bond returns.</p>
+        <p>What the evidence did not support was the monthly index-level implementation. It did not earn its place once it had to forecast recursively, beat simple alternatives and survive uncertainty around the backtest.</p>
 
-        <p>And once credit spreads were included, there might simply be little left for the equity variables to explain.</p>
-
-        <h2>What the exercise showed</h2>
-
-        <p>The thesis grew out of a familiar investment temptation: a relationship can make economic sense, look persuasive on a chart and still fail to improve an actual portfolio decision.</p>
-
-        <p>Equity and option markets clearly reflect changes in investors’ perception of risk. High-yield credit is more sensitive than investment grade to deteriorating economic conditions. Volatility often rises around episodes of credit stress.</p>
-
-        <p>The difficult part is turning those observations into a signal that arrives early enough, adds information that is not already priced elsewhere and continues to work when tested on data the model has not yet seen.</p>
-
-        <p>The results were less dramatic than my original intuition, but more useful. They showed how quickly an attractive cross-asset narrative can weaken when it is forced to forecast recursively, compete against simple alternatives and survive statistical scrutiny.</p>
-
-        <p>The <a href="/articles/why-plausible-investment-signals-fail-out-of-sample/">follow-up article</a> looks at what happened when the models were put to that test: what failed, what held up better, and why an apparently stronger backtest did not necessarily translate into reliable investment value.</p>
+        <p>That is a more useful conclusion than a good-looking historical chart.</p>
 
         <aside class="article-note">
-          <p>This article draws on my master’s thesis, <em>Equity-Implied Signals in Corporate Bond Allocation</em>, completed at Frankfurt School of Finance &amp; Management. The research code and selected results are available in the <a href="https://github.com/mujtababhutto/Equity-implied-signals-in-corporate-bond-allocation">project repository</a>. Historical analysis is not investment advice.</p>
+          <p>This is the second article in a two-part series based on my master’s thesis, <em>Equity-Implied Signals in Corporate Bond Allocation</em>, completed at Frankfurt School of Finance &amp; Management. The research code and selected results are available in the <a href="https://github.com/mujtababhutto/Equity-implied-signals-in-corporate-bond-allocation">project repository</a>. Historical analysis is not investment advice.</p>
         </aside>
       </div>
     </article>
