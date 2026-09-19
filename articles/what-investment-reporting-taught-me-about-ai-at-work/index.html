@@ -15,7 +15,7 @@
   <meta name="twitter:title" content="What Investment Reporting Taught Me About AI at Work">
   <meta name="twitter:description" content="What reporting projects in sovereign reserves and private markets taught me about business knowledge, technical barriers and the practical use of AI.">
   <title>What Investment Reporting Taught Me About AI at Work — Mujtaba Ali Bhutto</title>
-  <link rel="stylesheet" href="/assets/css/styles.css?v=12">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=13">
 </head>
 <body>
   <header class="site-header">
@@ -89,6 +89,13 @@
 
         <p>The experience changed the range of technical work I was willing to attempt. Analysts do not need to become developers, but there is value in being able to move further into implementation when repetitive preparation is crowding out the analysis itself. The reports still had to be read, valuations questioned and performance interpreted. AI made it easier to improve the process around that work without confusing the process with the judgement it was meant to support.</p>
 
+        <div class="article-share" aria-label="Share this article">
+          <span>Share this article</span>
+          <a data-share-linkedin href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <button data-copy-link type="button">Copy link</button>
+          <span class="article-share-status" data-share-status aria-live="polite"></span>
+        </div>
+
         <aside class="article-note">
           <p>This article reflects my personal views and experience. It describes general lessons from my work and does not disclose confidential or proprietary information belonging to any former employer, portfolio company, fund or manager.</p>
         </aside>
@@ -106,5 +113,25 @@
       </div>
     </div>
   </footer>
+  <script>
+    (() => {
+      const canonical = document.querySelector('link[rel="canonical"]')?.href || window.location.href;
+      const linkedIn = document.querySelector('[data-share-linkedin]');
+      const copyButton = document.querySelector('[data-copy-link]');
+      const status = document.querySelector('[data-share-status]');
+
+      linkedIn.href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(canonical)}`;
+
+      copyButton.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(canonical);
+          status.textContent = 'Copied';
+          window.setTimeout(() => { status.textContent = ''; }, 2000);
+        } catch {
+          window.prompt('Copy this link:', canonical);
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
